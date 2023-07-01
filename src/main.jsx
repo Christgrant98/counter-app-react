@@ -1,17 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
+import CounterApp from './counter_app';
+import './styles.css';
 
-import {TestApp} from './TestApp'
-import './styles.css'
-
-
-
-
-
-// Document Object Model
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.render(
   <React.StrictMode>
-    <TestApp  
-    />
-  </React.StrictMode>
-)
+    <CounterApp value={10} />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
